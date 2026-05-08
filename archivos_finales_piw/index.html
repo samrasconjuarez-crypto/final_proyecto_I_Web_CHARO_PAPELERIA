@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAPECHARO - Tu Papelería de Confianza</title>
+    <link rel="stylesheet" href="estilo_home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <a href="https://api.whatsapp.com/send?phone=%2B526567647697&token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjEyNSJ9.eyJleHAiOjE3NzgyMTA0ODEsInBob25lIjoiKzUyNjU2NzY0NzY5NyIsImNvbnRleHQiOiJBZmhGdl9VZHF1X096OFNidktJZGdLMWJNUkJDTjA5Nm5QTDkzdV9zVGNSc0Nwd28zUGxWZlYyZU9Ed2lPVEFMV0xTT2laRkpUTlpTbFg3ZUt4YkdzYjFLb2tTQlp4ekdHSXdfWk9qUkV5djBhRTdRVXdTTkxjMWh3UnhtLW5abE9FdmRIQlFsaHNkTjdUWWl6SFFyWTh1N3V3Iiwic291cmNlIjoiRkJfUGFnZSIsImFwcCI6ImZhY2Vib29rIiwiZW50cnlfcG9pbnQiOiJwYWdlX2N0YSJ9.DMgxTEol_Ag3bIDTT0Cx1D2Kxb5nSmcRe3ou1xXfP5hgPdu681RpeLXnn2VuIqdEPylhQSJFUSqaZxCZjZ4X5A" target="_blank" class="whatsapp-fixed" title="Escríbenos por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span>¿Necesita ayuda?</span>
+    </a>
+
+    <header>
+        <nav class="navbar container">
+            <div class="logo">
+             <a href="index.html">  <h1>PAPE<span class="orange-text">CHARO</span></h1> </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Inicio</a></li>
+                <li><a href="#">Catálogo</a></li>
+                <li><a href="sobre_nosotros.html">Sobre nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <a href="#" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    </a>
+                <a href="#" class="login-link">Iniciar sesión</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="hero-slider">
+            <div class="slider-container">
+                <div class="slides">
+                    <div class="slide active">
+                        <img src="imagenes_home/slider_1.jpg" alt="Promoción 1">
+                        <div class="slide-content">Artículos de oficina</div>
+                    </div>
+                    <div class="slide">
+                        <img src="imagenes_home/slider_2.jpg" alt="Promoción 2">
+                        <div class="slide-content">Útiles Escolares</div>
+                    </div>
+                    <div class="slide">
+                        <img src="imagenes_home/slider_3.jpg" alt="Promoción 3">
+                        <div class="slide-content">Productos de temporada</div>
+                    </div>
+                </div>
+                <button class="prev" id="prevSlide">&#10094;</button>
+                <button class="next" id="nextSlide">&#10095;</button>
+            </div>
+        </section>
+
+        <section id="categories">
+            <div class="categories-grid">
+                <div class="category-card">
+                    <img src="imagenes_home/categoria_1.jpg" alt="Productos destacados">
+                    <div class="card-content">
+                        <h3>Productos destacados</h3>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="imagenes_home/categoria_2.jpg" alt="Productos de temporada">
+                    <div class="card-content">
+                        <h3>Productos de temporada</h3>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="imagenes_home/categoria_3.jpg" alt="Ver más productos">
+                    <div class="card-content">
+                        <h3>Ver más</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="offers">
+            <h2>Ofertas de hoy</h2>
+            <div class="offers-grid">
+                <div class="offer-card large">
+                    <img src="imagenes_home/oferta_3.jpg" alt="Oferta 30% Descuento">
+                    <div class="offer-info">
+                        <h3>TODA LA PAPELERÍA</h3>
+                        <p>LA PAPELERÍA, MOCHILAS, LONCHERAS Y LÁPICES</p>
+                        <p class="whatsapp-callout"><i class="fab fa-whatsapp"></i> WhatsApp: +52 656 764 7697</p>
+                    </div>
+                </div>
+                <div class="small-offers">
+                    <div class="offer-card small">
+                        <img src="imagenes_home/oferta_2.jpg" alt="Oferta 50% Papelería">
+                        <div class="offer-info">
+                            <h3>50% DESCUENTO</h3>
+                            <p>En toda la papelería, lleva el segundo al...</p>
+                        </div>
+                    </div>
+                    <div class="offer-card small">
+                        <img src="imagenes_home/oferta_1.webp" alt="Muralla del Ahorro">
+                        <div class="offer-info">
+                            <h3>MURALLA DEL AHORRO</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <a href="#"><img src="imagenes_home/LogoPapeBlanco.png" alt="Pape Charo" height="100px"></a>
+                <p>&copy; 2026 PAPECHARO. Todos los derechos reservados.</p>
+            </div>
+            <ul class="footer-links">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Authors</a></li>
+                <li><a href="#">Archive</a></li>
+                <li><a href="#">Terms and Conditions</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script_home.js"></script>
+</body>
+</html>

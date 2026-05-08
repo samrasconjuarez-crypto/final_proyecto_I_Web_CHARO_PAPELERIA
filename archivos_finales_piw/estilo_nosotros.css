@@ -1,0 +1,298 @@
+/* =========================================
+   ESTILOS GENERALES Y RESETS (Mismos que Home)
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f5ed;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.orange-text { color: #e2a94a; }
+.text-center { text-align: center; }
+
+/* ENCABEZADO (NAVBAR) - FIJO*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ede6d6;
+    z-index: 2000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 15px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+   
+}
+
+.logo a{
+     text-decoration: none; /* Quita el subrayado */
+    color: inherit; 
+}
+
+.logo:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: 0.3s;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #4a90e2;
+    border-bottom: 2px solid #4a90e2;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-bar {
+    display: flex;
+    background-color: #fcfaf5;
+    border: 1px solid #d1c9b8;
+    border-radius: 25px;
+    padding: 5px 15px;
+}
+
+.search-bar input {
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 5px;
+    width: 120px;
+    font-size: 0.85rem;
+}
+
+.search-bar button {
+    border: none;
+    background: transparent;
+    color: #888;
+    cursor: pointer;
+}
+
+.cart-icon {
+    font-size: 1.3rem;
+    color: #444;
+    transition: 0.3s;
+}
+
+.cart-icon:hover { color: #e2a94a; }
+.login-link { text-decoration: none; color: #333; font-size: 0.9rem; font-weight: bold; }
+
+/* BOTÓN DE WHATSAPP FIJO */
+.whatsapp-fixed {
+    position: fixed;
+    top: 90px;
+    right: 25px;
+    background-color: #25d366;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    z-index: 1500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.whatsapp-fixed:hover {
+    transform: translateY(-3px);
+    background-color: #1ebe5a;
+}
+
+/* CONTENIDO PRINCIPAL (SOBRE NOSOTROS)*/
+main {
+    margin-top: 220px; /* Mantiene el espacio debajo del navbar fijo */
+    padding-bottom: 60px;
+}
+
+h2 {
+    font-size: 2.2rem;
+    color: #222;
+    margin-bottom: 25px;
+}
+
+/* Sección Introducción */
+.about-section {
+  max-width: 850px;
+    margin: 0 auto 100px auto; /* Aumentamos el margen inferior para separar secciones */
+    padding-top: 20px;
+}
+
+.about-section p {
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    color: #444;
+}
+.about-section h2 {
+    margin-top: 100px;
+}
+
+/* Sección Nuestro Trabajo (2 columnas) */
+.work-section {
+    margin-bottom: 80px;
+}
+
+.work-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.work-text {
+    flex: 1;
+}
+
+.work-text p {
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+    color: #444;
+    text-align: justify;
+}
+
+.work-image {
+    flex: 1;
+}
+
+.work-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
+/* Sección Servicios (Banner y Botón) */
+.services-section {
+    max-width: 1000px;
+    margin: 0 auto 60px auto;
+}
+
+.services-banner {
+    position: relative;
+    margin: 30px 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.services-banner img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+/* Botón Explorar Más Flotante */
+.btn-explorar {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #6b8df2; /* Azul estilo de tu imagen */
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-explorar:hover {
+    background-color: #5575d8;
+    transform: translateX(-50%) scale(1.05); /* Efecto de crecimiento sutil */
+}
+
+.services-text p {
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    color: #444;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* FOOTER */
+footer {
+    background-color: #444;
+    color: #ddd;
+    padding: 50px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo h1 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #bbb;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #e2a94a;
+}
