@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - PAPECHARO</title>
+    <link rel="stylesheet" href="estilo_home.css">
+    <link rel="stylesheet" href="estilo_catalogo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <a href="https://api.whatsapp.com/send?phone=%2B526567647697" target="_blank" class="whatsapp-fixed" title="Escríbenos por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span>¿Necesita ayuda?</span>
+    </a>
+
+    <header>
+        <nav class="navbar container">
+            <div class="logo">
+               <a href="index.html"><h1>PAPE<span class="orange-text">CHARO</span></h1></a> 
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html" class="active">Catálogo</a></li>
+                <li><a href="#">Sobre nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <a href="#" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <a href="#" class="login-link">Iniciar sesión</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="catalog-header">
+            <h2>Categorías</h2>
+        </section>
+
+        <section class="categories-section">
+            <button class="nav-arrow" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+            
+            <div class="categories-carousel" id="carousel">
+                <div class="cat-card" onclick="showProducts('cuadernos')">
+                    <div class="circle bg-orange"><i class="fas fa-book"></i></div>
+                    <span>Cuadernos</span>
+                </div>
+                <div class="cat-card" onclick="showProducts('boligrafos')">
+                    <div class="circle bg-teal"><i class="fas fa-pen-fancy"></i></div>
+                    <span>Bolígrafos</span>
+                </div>
+                <div class="cat-card" onclick="showProducts('colores')">
+                    <div class="circle bg-mint"><i class="fas fa-pencil-alt"></i></div>
+                    <span>Colores</span>
+                </div>
+                <div class="cat-card" onclick="showProducts('reglas')">
+                    <div class="circle bg-blue"><i class="fas fa-ruler-combined"></i></div>
+                    <span>Reglas</span>
+                </div>
+                <div class="cat-card" onclick="showProducts('tijeras')">
+                    <div class="circle bg-orange"><i class="fas fa-cut"></i></div>
+                    <span>Tijeras</span>
+                </div>
+                <div class="cat-card" onclick="showProducts('borradores')">
+                    <div class="circle bg-teal"><i class="fas fa-eraser"></i></div>
+                    <span>Borradores</span>
+                </div>
+                <div class="cat-card" onclick="showProducts('marcadores')">
+                    <div class="circle bg-blue"><i class="fas fa-marker"></i></div>
+                    <span>Plumones</span>
+                </div>
+            </div>
+
+            <button class="nav-arrow" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+        </section>
+
+        <section id="product-display" class="product-display">
+            <h3 id="category-title">Artículos</h3>
+            <div class="products-grid" id="products-grid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <a href="index.html">
+                    <img src="LogoPape2.png" alt="PAPECHARO Logo" class="logo-img" height="100px">
+                </a>
+                <p>&copy; 2026 PAPECHARO. Todos los derechos reservados.</p>
+            </div>
+            <ul class="footer-links">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Authors</a></li>
+                <li><a href="#">Archive</a></li>
+                <li><a href="#">Terms and Conditions</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script_catalogo.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            showProducts('cuadernos', false); // false para que no haga scroll al cargar
+        });
+    </script>
+</body>
+</html>

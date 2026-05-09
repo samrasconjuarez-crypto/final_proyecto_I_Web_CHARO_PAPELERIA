@@ -1,0 +1,133 @@
+.contact-main {
+    margin-top: 140px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding-bottom: 80px;
+}
+
+/* Sección de Información */
+.contact-header h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.info-grid {
+    margin-top: 30px;
+    display: grid;
+    gap: 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: #ede6d6; /* Beige de tus tarjetas */
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.info-item-link {
+    text-decoration: none; /* Quita el subrayado */
+    color: inherit; /* Mantiene el color de texto original */
+    display: block; /* Para que el link ocupe todo el espacio de la tarjeta */
+}
+
+.info-item {
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: 0.3s all ease;
+}
+
+.info-item:hover {
+    background: #fff;
+    border-color: #f15a24;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.info-item:hover {
+    transform: translateX(10px);
+}
+
+.info-item i {
+    font-size: 1.8rem;
+    color: #f15a24; /* Naranja corporativo */
+    width: 50px;
+    text-align: center;
+}
+
+.info-item h4 {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+/* Formulario */
+.contact-form-section {
+    background: #fff;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.contact-form h3 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #007179; /* Teal de tus círculos */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #f8f5ed;
+    border-radius: 10px;
+    background: #fdfdfd;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #e2a94a;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: #f15a24;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: 900;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #000;
+    transform: scale(1.02);
+}
+
+/* Ajuste responsivo */
+@media (max-width: 900px) {
+    .contact-main {
+        grid-template-columns: 1fr;
+    }
+}
