@@ -1,0 +1,436 @@
+/* =========================================
+   RESET GENERAL
+========================================= */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f5ed; /* Fondo crema claro */
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.orange-text {
+    color: #e2a94a;
+}
+
+/* NAVBAR */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ede6d6; 
+    z-index: 2000; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 15px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Efecto Hover en Logo */
+
+.logo {
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+
+
+.logo img{
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+    transition: 0.3s ease;
+}
+
+.logo img:hover{
+    transform: scale(1.05);
+}
+
+
+/* Enlaces de Navegación */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: 0.3s;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #4a90e2;
+    border-bottom: 2px solid #4a90e2;
+}
+
+/* Acciones (Búsqueda, Carrito, Login) */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-bar {
+    display: flex;
+    background-color: #fcfaf5;
+    border: 1px solid #d1c9b8;
+    border-radius: 25px;
+    padding: 5px 15px;
+}
+
+.search-bar input {
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 5px;
+    width: 120px;
+    font-size: 0.85rem;
+}
+
+.search-bar button {
+    border: none;
+    background: transparent;
+    color: #888;
+    cursor: pointer;
+}
+
+.cart-icon {
+    font-size: 1.3rem;
+    color: #444;
+    transition: 0.3s;
+}
+
+.cart-icon:hover {
+    color: #e2a94a;
+}
+
+.login-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* BOTÓN DE WHATSAPP FIJO (DEBAJO DEL NAV) */
+.whatsapp-fixed {
+    position: fixed;
+    top: 90px; /* Se coloca justo debajo del navbar */
+    right: 25px;
+    background-color: #25d366;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    z-index: 1500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.whatsapp-fixed:hover {
+    transform: translateY(-3px);
+    background-color: #1ebe5a;
+}
+
+/* =========================================
+   MAIN PERFIL
+========================================= */
+
+.profile-page{
+    margin-top: 180px;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+/* =========================================
+   PERFIL IZQUIERDA
+========================================= */
+
+.profile-section{
+    flex: 1;
+}
+
+.profile-header h1{
+    font-size: 4.5rem;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.profile-header h2{
+    font-size: 2.3rem;
+    margin-bottom: 40px;
+}
+
+/* TARJETA */
+
+.profile-card{
+    background-color: #efe4d4;
+    border-radius: 30px;
+    padding: 35px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* CAMPOS */
+
+.profile-field{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profile-field label{
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.profile-field input{
+    background-color: #dbc7af;
+
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 18px;
+    font-size: 1rem;
+    color: #111;
+}
+
+.profile-field input:disabled{
+    opacity: 1;
+}
+
+/* BOTÓN */
+
+.edit-btn{
+    margin-top: 40px;
+    background-color: #0e7ceb;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 18px 40px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.edit-btn:hover{
+    background-color: #3f6d9a;
+    transform: translateY(-3px);
+}
+
+.save-mode{
+    background-color: #0cd660;
+}
+
+.save-mode:hover{
+    background-color: #1f8a4d;
+}
+
+.disabled-mode{
+    background-color: #7f8c8d;
+    cursor: not-allowed;
+}
+
+.disabled-mode:hover{
+    background-color: #7f8c8d;
+    transform: none;
+}
+
+/* =========================================
+   AJUSTES
+========================================= */
+
+.settings-panel{
+    width: 420px;
+    background-color: #e5e5e5;
+    border-radius: 35px;
+    padding: 40px;
+}
+
+.settings-panel h2{
+
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+
+/* LISTA */
+
+.settings-list{
+
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+.settings-list li{
+
+    border-bottom: 2px solid #111;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.settings-list li:hover{
+    color: #4a90e2;
+    transform: translateX(5px);
+}
+
+.logout-option{
+    color: #c0392b;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    background-color: #444;
+    color: #ddd;
+    padding: 50px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo h1 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #bbb;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #e2a94a;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media screen and (max-width: 1000px){
+
+    .profile-page{
+        flex-direction: column;
+    }
+
+    .settings-panel{
+        width: 100%;
+    }
+
+    .profile-card{
+        max-width: 100%;
+    }
+
+    .navbar{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-actions{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-content{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 600px){
+
+    .profile-header h1{
+        font-size: 3rem;
+    }
+
+    .profile-header h2{
+        font-size: 1.6rem;
+    }
+
+    .settings-panel h2{
+        font-size: 2rem;
+    }
+
+    .edit-btn{
+        width: 100%;
+    }
+
+    .nav-links a{
+        padding: 10px 15px;
+    }
+
+    .profile-page{
+        margin-top: 250px;
+    }
+}
