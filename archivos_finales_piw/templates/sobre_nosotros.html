@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nosotros - PAPECHARO</title>
-    <link rel="stylesheet" href="estilo_nosotros.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo_nosotros.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -54,7 +54,12 @@
                     <p>Nuestro equipo está capacitado para asesorarte y ayudarte a encontrar exactamente lo que buscas. Ya sea material especializado para diseño, útiles básicos para el regreso a clases o suministros al por mayor para tu empresa, en nuestro trabajo diario está la vocación de servirte con rapidez y eficiencia.</p>
                 </div>
                 <div class="work-image">
-                    <img src="imagenes_nosotros/nosotros_1.jpg" alt="Material escolar de Papecharo">
+                    <img src="{{ url_for('static', filename='img/img_nosotros/nosotros_1.jpg') }}" 
+                        alt="Material escolar de Papecharo">
+
+
+
+
                 </div>
             </div>
         </section>
@@ -79,7 +84,11 @@
     <footer>
         <div class="container footer-content">
              <div class="footer-logo">
-                <a href="#"><img src="imagenes_home/LogoPapeBlanco.png" alt="Pape Charo" height="100px"></a>
+               <a href="#">
+    <img src="{{ url_for('static', filename='img/imagenes_home/LogoPapeBlanco.png') }}" 
+        alt="Pape Charo" 
+        height="100px">
+</a>
                 <p>&copy; 2026 PAPECHARO. Todos los derechos reservados.</p>
             </div>
             <ul class="footer-links">

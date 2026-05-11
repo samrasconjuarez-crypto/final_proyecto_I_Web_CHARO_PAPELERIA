@@ -6,7 +6,7 @@
     <title>PAPECHARO - Carrito</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="estilo_carrito.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo_carrito.css') }}">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -173,7 +173,8 @@
             <div class="footer-logo">
 
                 <div class="logo">
-                    <img src="imagenes_carrito/LogoPape2.png" alt="Logo PAPECHARO">
+                    <img src="{{ url_for('static', filename='img/LogoPape2.png') }}" 
+                        alt="Logo PAPECHARO">
                 </div>
 
                 <p>&copy; 2026 PAPECHARO. Todos los derechos reservados.</p>
@@ -191,7 +192,7 @@
         </div>
     </footer>
 
-    <script src="script_carrito.js"></script>
+    <script src="{{ url_for('static', filename='js/script_carrito.js') }}"></script>
 
 </body>
 </html>

@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PAPECHARO - Tu Papelería de Confianza</title>
-    <link rel="stylesheet" href="estilo_IniciarSesion.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo_IniciarSesion.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
-    <a href="https://api.whatsapp.com/send?phone=%2B526567647697&token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjEyNSJ9.eyJleHAiOjE3NzgyMTA0ODEsInBob25lIjoiKzUyNjU2NzY0NzY5NyIsImNvbnRleHQiOiJBZmhGdl9VZHF1X096OFNidktJZGdLMWJNUkJDTjA5Nm5QTDkzdV9zVGNSc0Nwd28zUGxWZlYyZU9Ed2lPVEFMV0xTT2laRkpUTlpTbFg3ZUt4YkdzYjFLb2tTQlp4ekdHSXdfWk9qUkV5djBhRTdRVXdTTkxjMWh3UnhtLW5abE9FdmRIQlFsaHNkTjdUWWl6SFFyWTh1N3V3Iiwic291cmNlIjoiRkJfUGFnZSIsImFwcCI6ImZhY2Vib29rIiwiZW50cnlfcG9pbnQiOiJwYWdlX2N0YSJ9.DMgxTEol_Ag3bIDTT0Cx1D2Kxb5nSmcRe3ou1xXfP5hgPdu681RpeLXnn2VuIqdEPylhQSJFUSqaZxCZjZ4X5A" target="_blank" class="whatsapp-fixed" title="Escríbenos por WhatsApp">
+ <a href="https://api.whatsapp.com/send?phone=%2B526567647697&token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjEyNSJ9.eyJleHAiOjE3NzgyMTA0ODEsInBob25lIjoiKzUyNjU2NzY0NzY5NyIsImNvbnRleHQiOiJBZmhGdl9VZHF1X096OFNidktJZGdLMWJNUkJDTjA5Nm5QTDkzdV9zVGNSc0Nwd28zUGxWZlYyZU9Ed2lPVEFMV0xTT2laRkpUTlpTbFg3ZUt4YkdzYjFLb2tTQlp4ekdHSXdfWk9qUkV5djBhRTdRVXdTTkxjMWh3UnhtLW5abE9FdmRIQlFsaHNkTjdUWWl6SFFyWTh1N3V3Iiwic291cmNlIjoiRkJfUGFnZSIsImFwcCI6ImZhY2Vib29rIiwiZW50cnlfcG9pbnQiOiJwYWdlX2N0YSJ9.DMgxTEol_Ag3bIDTT0Cx1D2Kxb5nSmcRe3ou1xXfP5hgPdu681RpeLXnn2VuIqdEPylhQSJFUSqaZxCZjZ4X5A" target="_blank" class="whatsapp-fixed" title="Escríbenos por WhatsApp">
         <i class="fab fa-whatsapp"></i>
         <span>¿Necesita ayuda?</span>
     </a>
@@ -39,65 +39,66 @@
     </header>
 
 
-    <main class="login-main">
+
+<main class="login-main">
 
     <section class="login-container">
 
-        <h1>REGISTRARSE</h1>
-
-        <p class="register-subtitle">
-            Crea tu cuenta en PAPECHARO
-        </p>
+        <h1>INICIAR SESIÓN</h1>
 
         <form class="login-form">
 
-         <!-- Nombre -->
-<div class="input-group">
-    <i class="fas fa-user"></i>
-    <input type="text" placeholder="Nombre completo" required>
-</div>
+            <!-- Correo -->
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="email" placeholder="Correo electrónico" required>
+            </div>
 
-<!-- Correo -->
-<div class="input-group">
-    <i class="fas fa-envelope"></i>
-    <input type="email" placeholder="Correo electrónico" required>
-</div>
+            <!-- Contraseña -->
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Contraseña" required>
+            </div>
 
-<!-- Contraseña -->
-<div class="input-group">
-    <i class="fas fa-lock"></i>
-    <input type="password" placeholder="Contraseña" required>
-</div>
+            
+            <div class="login-options">
 
-<!-- Confirmar contraseña -->
-<div class="input-group">
-    <i class="fas fa-lock"></i>
-    <input type="password" placeholder="Confirmar contraseña" required>
-</div>
+                <label class="remember-me">
+                    <input type="checkbox">
+                    Recordarme
+                </label>
 
-            <!-- Botón -->
-            <a href="Home.html" class="login-btn">
-                CREAR CUENTA
-            </a>
+                <a href="#" class="forgot-password">
+                    ¿Olvidaste tu contraseña?
+                </a>
+
+            </div>
+
+            
+            <button type="submit" class="login-btn">
+                ENTRAR
+            </button>
 
         </form>
 
-        <!-- Login -->
+        
         <p class="register-text">
-            ¿Ya tienes cuenta?
-            <a href="IniciarSesion.html">Inicia sesión</a>
+            ¿No tienes cuenta?
+            <a href="Registrarse.html">Regístrate aquí</a>
         </p>
 
     </section>
 
 </main>
 
- 
-     <footer>
+    <footer>
         <div class="container footer-content">
             <div class="footer-logo">
                 <a href="index.html">
-                    <img src="LogoPape2.png" alt="PAPECHARO Logo" class="logo-img" height="100px">
+                    <img src="{{ url_for('static', filename='img/LogoPape2.png') }}" 
+                    alt="PAPECHARO Logo" 
+                    class="logo-img" 
+                    height="100px">
                 </a>
                 <p>&copy; 2026 PAPECHARO. Todos los derechos reservados.</p>
             </div>
