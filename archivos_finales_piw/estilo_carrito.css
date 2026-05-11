@@ -1,0 +1,430 @@
+/* =========================================
+   RESET GENERAL
+========================================= */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f5ed;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.orange-text {
+    color: #e2a94a;
+}
+
+/* NAVBAR */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ede6d6; 
+    z-index: 2000; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 15px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Efecto Hover en Logo */
+
+.logo {
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+
+
+.logo img{
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+    transition: 0.3s ease;
+}
+
+.logo img:hover{
+    transform: scale(1.05);
+}
+
+
+/* Enlaces de Navegación */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: 0.3s;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #4a90e2;
+    border-bottom: 2px solid #4a90e2;
+}
+
+/* Acciones (Búsqueda, Carrito, Login) */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-bar {
+    display: flex;
+    background-color: #fcfaf5;
+    border: 1px solid #d1c9b8;
+    border-radius: 25px;
+    padding: 5px 15px;
+}
+
+.search-bar input {
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 5px;
+    width: 120px;
+    font-size: 0.85rem;
+}
+
+.search-bar button {
+    border: none;
+    background: transparent;
+    color: #888;
+    cursor: pointer;
+}
+
+.cart-icon {
+    font-size: 1.3rem;
+    color: #444;
+    transition: 0.3s;
+}
+
+.cart-icon:hover {
+    color: #e2a94a;
+}
+
+.login-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* BOTÓN DE WHATSAPP FIJO (DEBAJO DEL NAV) */
+.whatsapp-fixed {
+    position: fixed;
+    top: 90px; /* Se coloca justo debajo del navbar */
+    right: 25px;
+    background-color: #25d366;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    z-index: 1500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.whatsapp-fixed:hover {
+    transform: translateY(-3px);
+    background-color: #1ebe5a;
+}
+
+
+/* =========================================
+   MAIN CARRITO
+========================================= */
+
+.cart-page{
+    margin-top: 180px;
+    margin-bottom: 100px;
+
+    width: 95%;
+    max-width: 1700px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: grid;
+    grid-template-columns: minmax(900px, 1fr) 320px;
+
+    justify-content: center;
+    align-items: start;
+
+    gap: 50px;
+}
+
+/* IZQUIERDA */
+
+.cart-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-header h1{
+    font-size: 4rem;
+    color: #111;
+    margin-bottom: 40px;
+}
+
+/* COLUMNAS */
+
+.cart-columns{
+   width: 100%;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr 90px;
+
+    align-items: center;
+    margin-bottom: 25px;
+    padding: 0 15px;
+}
+
+.cart-columns span{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #111;
+}
+
+/* ITEMS */
+
+.cart-item{
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr 90px;
+
+    align-items: center;
+    background-color: #dbc7af;
+    padding: 30px 15px;
+    margin-bottom: 25px;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+
+.cart-item:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.cart-item div{
+    font-size: 2rem;
+    color: #111;
+}
+
+/* DELETE BUTTON */
+
+.delete-btn{
+    background-color: #e51d25;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    cursor: pointer;
+    color: white;
+    font-size: 1.8rem;
+    transition: 0.3s ease;
+}
+
+.delete-btn:hover{
+    background-color: #000000;
+    transform: scale(1.05);
+}
+
+/* =========================================
+   RESUMEN
+========================================= */
+
+.cart-summary{
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 30px;
+    margin-top: 500px;
+}
+
+.total-box{
+    background-color: #d9d9d9;
+    padding: 18px 35px;
+}
+
+.total-box h2{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #111;
+}
+
+/* PAY BUTTON */
+
+.pay-btn{
+    width: 100%;
+    background-color: #5b84b1;
+    color: white;
+    border: none;
+    border-radius: 18px;
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.pay-btn:hover{
+    background-color: #3f6d9a;
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    background-color: #444;
+    color: #ddd;
+    padding: 50px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo h1 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #bbb;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #e2a94a;
+}
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media screen and (max-width: 1100px){
+
+    .cart-page{
+        flex-direction: column;
+    }
+
+    .cart-summary{
+        width: 100%;
+        margin-top: 20px;
+        align-items: stretch;
+    }
+
+    .navbar{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-actions{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-content{
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 800px){
+
+    .cart-header h1{
+        font-size: 2.8rem;
+    }
+
+    .cart-columns{
+        display: none;
+    }
+
+    .cart-item{
+        grid-template-columns: 1fr;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .cart-item div{
+        font-size: 1.5rem;
+    }
+
+    .delete-btn{
+        margin: 0 auto;
+    }
+
+    .pay-btn{
+        font-size: 1.5rem;
+    }
+
+    .cart-page{
+        margin-top: 250px;
+    }
+}

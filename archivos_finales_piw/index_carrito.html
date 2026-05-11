@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAPECHARO - Carrito</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="estilo_carrito.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- BOTÓN WHATSAPP -->
+    <a href="#" class="whatsapp-fixed">
+        <i class="fab fa-whatsapp"></i>
+        <span>¿Necesita ayuda?</span>
+    </a>
+
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar container">
+
+            <div class="logo">
+                <h1>PAPE<span class="orange-text">CHARO</span></h1>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Catálogo</a></li>
+                <li><a href="#">Sobre nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+
+            <div class="nav-actions">
+
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar...">
+                    <button>
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+
+                <a href="#" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+
+                <a href="#" class="login-link active-profile">
+                    Mi Perfil
+                </a>
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main class="container cart-page">
+
+        <!-- IZQUIERDA -->
+        <section class="cart-section">
+
+            <div class="cart-header">
+                <h1>Carrito de Compras</h1>
+            </div>
+
+            <!-- COLUMNAS -->
+            <div class="cart-columns">
+                <span>Producto</span>
+                <span>Precio</span>
+                <span>Cantidad</span>
+                <span>Sub Total</span>
+            </div>
+
+            <!-- PRODUCTO -->
+            <div class="cart-item">
+
+                <div class="product-name">
+                    Producto 1
+                </div>
+
+                <div class="product-price">
+                    $25
+                </div>
+
+                <div class="product-quantity">
+                    5
+                </div>
+
+                <div class="product-subtotal">
+                    $125
+                </div>
+
+                <button class="delete-btn">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+
+            </div>
+
+            <!-- PRODUCTO -->
+            <div class="cart-item">
+
+                <div class="product-name">
+                    Producto 2
+                </div>
+
+                <div class="product-price">
+                    $30
+                </div>
+
+                <div class="product-quantity">
+                    3
+                </div>
+
+                <div class="product-subtotal">
+                    $90
+                </div>
+
+                <button class="delete-btn">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+
+            </div>
+
+            <!-- PRODUCTO -->
+            <div class="cart-item">
+
+                <div class="product-name">
+                    Producto 3
+                </div>
+
+                <div class="product-price">
+                    $40
+                </div>
+
+                <div class="product-quantity">
+                    2
+                </div>
+
+                <div class="product-subtotal">
+                    $80
+                </div>
+
+                <button class="delete-btn">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- DERECHA -->
+        <aside class="cart-summary">
+
+            <div class="total-box">
+                <h2>Total: $295</h2>
+            </div>
+
+            <button class="pay-btn">
+                Pagar
+                <i class="fas fa-chevron-right"></i>
+            </button>
+
+        </aside>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-content">
+
+            <div class="footer-logo">
+
+                <div class="logo">
+                    <img src="imagenes_carrito/LogoPape2.png" alt="Logo PAPECHARO">
+                </div>
+
+                <p>&copy; 2026 PAPECHARO. Todos los derechos reservados.</p>
+
+            </div>
+
+            <ul class="footer-links">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Authors</a></li>
+                <li><a href="#">Archive</a></li>
+                <li><a href="#">Terms and Conditions</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+            </ul>
+
+        </div>
+    </footer>
+
+    <script src="script_carrito.js"></script>
+
+</body>
+</html>
