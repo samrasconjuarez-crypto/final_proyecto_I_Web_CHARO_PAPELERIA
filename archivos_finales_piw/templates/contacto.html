@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,25 +9,29 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo_contacto.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
 
-    <a href="https://api.whatsapp.com/send?phone=%2B526567647697&token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjEyNSJ9.eyJleHAiOjE3NzgyMTA0ODEsInBob25lIjoiKzUyNjU2NzY0NzY5NyIsImNvbnRleHQiOiJBZmhGdl9VZHF1X096OFNidktJZGdLMWJNUkJDTjA5Nm5QTDkzdV9zVGNSc0Nwd28zUGxWZlYyZU9Ed2lPVEFMV0xTT2laRkpUTlpTbFg3ZUt4YkdzYjFLb2tTQlp4ekdHSXdfWk9qUkV5djBhRTdRVXdTTkxjMWh3UnhtLW5abE9FdmRIQlFsaHNkTjdUWWl6SFFyWTh1N3V3Iiwic291cmNlIjoiRkJfUGFnZSIsImFwcCI6ImZhY2Vib29rIiwiZW50cnlfcG9pbnQiOiJwYWdlX2N0YSJ9.DMgxTEol_Ag3bIDTT0Cx1D2Kxb5nSmcRe3ou1xXfP5hgPdu681RpeLXnn2VuIqdEPylhQSJFUSqaZxCZjZ4X5A" target="_blank" class="whatsapp-fixed" title="Escríbenos por WhatsApp">
+    <a href="https://api.whatsapp.com/send?phone=%2B526567647697&token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjEyNSJ9.eyJleHAiOjE3NzgyMTA0ODEsInBob25lIjoiKzUyNjU2NzY0NzY5NyIsImNvbnRleHQiOiJBZmhGdl9VZHF1X096OFNidktJZGdLMWJNUkJDTjA5Nm5QTDkzdV9zVGNSc0Nwd28zUGxWZlYyZU9Ed2lPVEFMV0xTT2laRkpUTlpTbFg3ZUt4YkdzYjFLb2tTQlp4ekdHSXdfWk9qUkV5djBhRTdRVXdTTkxjMWh3UnhtLW5abE9FdmRIQlFsaHNkTjdUWWl6SFFyWTh1N3V3Iiwic291cmNlIjoiRkJfUGFnZSIsImFwcCI6ImZhY2Vib29rIiwiZW50cnlfcG9pbnQiOiJwYWdlX2N0YSJ9.DMgxTEol_Ag3bIDTT0Cx1D2Kxb5nSmcRe3ou1xXfP5hgPdu681RpeLXnn2VuIqdEPylhQSJFUSqaZxCZjZ4X5A"
+        target="_blank" class="whatsapp-fixed" title="Escríbenos por WhatsApp">
         <i class="fab fa-whatsapp"></i>
         <span>¿Necesita ayuda?</span>
     </a>
-   <header>
+    <header>
         <nav class="navbar container">
             <div class="logo">
-               <a href="{{ url_for('home') }}"><h1>PAPE<span class="orange-text">CHARO</span></h1></a> 
+                <a href="{{ url_for('home') }}">
+                    <h1>PAPE<span class="orange-text">CHARO</span></h1>
+                </a>
             </div>
             <ul class="nav-links">
                 <li><a href="{{ url_for('home') }}">Inicio</a></li>
-                <li><a href="{{ url_for('catalogo') }}" class="active">
-                Catálogo </a></li>
+                <li><a href="{{ url_for('catalogo') }}">
+                        Catálogo </a></li>
                 <li><a href="{{ url_for('nosotros') }}">
-                Sobre nosotros </a></li>
+                        Sobre nosotros </a></li>
                 <li><a href="{{ url_for('contacto') }}">
-                Contacto </a></li>
+                        Contacto </a></li>
             </ul>
 
             <div class="nav-actions">
@@ -34,13 +39,18 @@
                     <input type="text" placeholder="Buscar...">
                     <button><i class="fas fa-search"></i></button>
                 </div>
-                
-                 <!-- CARRITO -->
-            <a href="{{ url_for('carrito') }}" class="cart-icon">
-                <i class="fas fa-shopping-cart"></i>
-            </a>
-                
+
+                <a href="{{ url_for('carrito') }}" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+
+                {% if session.get('usuario_id') %}
+                <a href="{{ url_for('perfil') }}" class="login-link">
+                    <i class="fas fa-user-circle"></i> Mi Perfil
+                </a>
+                {% else %}
                 <a href="{{ url_for('login') }}" class="login-link"> Iniciar sesión </a>
+                {% endif %}
             </div>
         </nav>
     </header>
@@ -60,10 +70,11 @@
                         <div>
                             <h4>WhatsApp</h4>
                             <p>656 764 7697</p>
-                         </div>
+                        </div>
                     </div>
                 </a>
-                <a href="https://www.facebook.com/profile.php?id=100067973116630" target="_blank" class="info-item-link">
+                <a href="https://www.facebook.com/profile.php?id=100067973116630" target="_blank"
+                    class="info-item-link">
                     <div class="info-item">
                         <i class="fab fa-facebook-f"></i>
                         <div>
@@ -94,7 +105,10 @@
 
             <!-- Mapa sugerido -->
             <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3393.738092288077!2d-106.4025178!3d31.6547167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e75bf7f451f7d1%3A0x3f5c7609a63c8!2sC.%20Floricultores%207647%2C%20Fidel%20Vel%C3%A1zquez%2C%2032425%20Cd%20Ju%C3%A1rez%2C%20Chih.!5e0!3m2!1ses-419!2smx!4v1715200000000" width="100%" height="250" style="border:0; border-radius:15px;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3393.738092288077!2d-106.4025178!3d31.6547167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e75bf7f451f7d1%3A0x3f5c7609a63c8!2sC.%20Floricultores%207647%2C%20Fidel%20Vel%C3%A1zquez%2C%2032425%20Cd%20Ju%C3%A1rez%2C%20Chih.!5e0!3m2!1ses-419!2smx!4v1715200000000"
+                    width="100%" height="250" style="border:0; border-radius:15px;" allowfullscreen=""
+                    loading="lazy"></iframe>
             </div>
         </section>
 
@@ -130,10 +144,8 @@
         <div class="container footer-content">
             <div class="footer-logo">
                 <a href="index.html">
-                                       <img src="{{ url_for('static', filename='img/LogoPape2.png') }}" 
-                        alt="PAPECHARO Logo" 
-                        class="logo-img" 
-                        height="100px">
+                    <img src="{{ url_for('static', filename='img/LogoPape2.png') }}" alt="PAPECHARO Logo"
+                        class="logo-img" height="100px">
                 </a>
                 <p>&copy; 2026 PAPECHARO. Todos los derechos reservados.</p>
             </div>
@@ -148,4 +160,5 @@
     </footer>
 
 </body>
+
 </html>

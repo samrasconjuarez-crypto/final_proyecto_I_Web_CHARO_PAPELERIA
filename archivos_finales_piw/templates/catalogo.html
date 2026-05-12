@@ -22,7 +22,7 @@
             </div>
             <ul class="nav-links">
                 <li><a href="{{ url_for('home') }}">Inicio</a></li>
-                <li><a href="{{ url_for('catalogo') }}" class="active">
+                <li><a href="{{ url_for('catalogo') }}">
                 Catálogo </a></li>
                 <li><a href="{{ url_for('nosotros') }}">
                 Sobre nosotros </a></li>
@@ -30,19 +30,24 @@
                 Contacto </a></li>
             </ul>
 
-            <div class="nav-actions">
-                <div class="search-bar">
-                    <input type="text" placeholder="Buscar...">
-                    <button><i class="fas fa-search"></i></button>
-                </div>
-                
-                 <!-- CARRITO -->
-            <a href="{{ url_for('carrito') }}" class="cart-icon">
-                <i class="fas fa-shopping-cart"></i>
-            </a>
-                
-                <a href="{{ url_for('login') }}" class="login-link"> Iniciar sesión </a>
-            </div>
+      <div class="nav-actions">
+    <div class="search-bar">
+        <input type="text" placeholder="Buscar...">
+        <button><i class="fas fa-search"></i></button>
+    </div>
+    
+    <a href="{{ url_for('carrito') }}" class="cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+    </a>
+
+    {% if session.get('usuario_id') %}
+        <a href="{{ url_for('perfil') }}" class="login-link">
+            <i class="fas fa-user-circle"></i> Mi Perfil
+        </a>
+    {% else %}
+        <a href="{{ url_for('login') }}" class="login-link"> Iniciar sesión </a>
+    {% endif %}
+</div>
         </nav>
     </header>
 

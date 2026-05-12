@@ -46,7 +46,7 @@ const productos = {
             nombre: "Escalímetro Profesional", 
             marca: "Staedtler", 
             precio: "$215.00", 
-            img: "https://tiendartemas.com/wp-content/uploads/2024/11/escalimetro-staedtler-arquitectura-tienda-artemas.jpg" 
+            img: "https://i5.walmartimages.com/asr/da8670d5-cb05-4618-97d9-0341b6830065.8de578052ccd7beaaf5591c6f3a36772.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF" 
         },
         { 
             nombre: "Regla de Aluminio 30cm", 

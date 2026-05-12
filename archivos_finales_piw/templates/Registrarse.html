@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,26 +8,30 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo_IniciarSesion.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
 
-    <a href="https://api.whatsapp.com/send?phone=%2B526567647697&token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjEyNSJ9.eyJleHAiOjE3NzgyMTA0ODEsInBob25lIjoiKzUyNjU2NzY0NzY5NyIsImNvbnRleHQiOiJBZmhGdl9VZHF1X096OFNidktJZGdLMWJNUkJDTjA5Nm5QTDkzdV9zVGNSc0Nwd28zUGxWZlYyZU9Ed2lPVEFMV0xTT2laRkpUTlpTbFg3ZUt4YkdzYjFLb2tTQlp4ekdHSXdfWk9qUkV5djBhRTdRVXdTTkxjMWh3UnhtLW5abE9FdmRIQlFsaHNkTjdUWWl6SFFyWTh1N3V3Iiwic291cmNlIjoiRkJfUGFnZSIsImFwcCI6ImZhY2Vib29rIiwiZW50cnlfcG9pbnQiOiJwYWdlX2N0YSJ9.DMgxTEol_Ag3bIDTT0Cx1D2Kxb5nSmcRe3ou1xXfP5hgPdu681RpeLXnn2VuIqdEPylhQSJFUSqaZxCZjZ4X5A" target="_blank" class="whatsapp-fixed" title="Escríbenos por WhatsApp">
+    <a href="https://api.whatsapp.com/send?phone=%2B526567647697&token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjEyNSJ9.eyJleHAiOjE3NzgyMTA0ODEsInBob25lIjoiKzUyNjU2NzY0NzY5NyIsImNvbnRleHQiOiJBZmhGdl9VZHF1X096OFNidktJZGdLMWJNUkJDTjA5Nm5QTDkzdV9zVGNSc0Nwd28zUGxWZlYyZU9Ed2lPVEFMV0xTT2laRkpUTlpTbFg3ZUt4YkdzYjFLb2tTQlp4ekdHSXdfWk9qUkV5djBhRTdRVXdTTkxjMWh3UnhtLW5abE9FdmRIQlFsaHNkTjdUWWl6SFFyWTh1N3V3Iiwic291cmNlIjoiRkJfUGFnZSIsImFwcCI6ImZhY2Vib29rIiwiZW50cnlfcG9pbnQiOiJwYWdlX2N0YSJ9.DMgxTEol_Ag3bIDTT0Cx1D2Kxb5nSmcRe3ou1xXfP5hgPdu681RpeLXnn2VuIqdEPylhQSJFUSqaZxCZjZ4X5A"
+        target="_blank" class="whatsapp-fixed" title="Escríbenos por WhatsApp">
         <i class="fab fa-whatsapp"></i>
         <span>¿Necesita ayuda?</span>
     </a>
 
- <header>
+    <header>
         <nav class="navbar container">
             <div class="logo">
-               <a href="{{ url_for('home') }}"><h1>PAPE<span class="orange-text">CHARO</span></h1></a> 
+                <a href="{{ url_for('home') }}">
+                    <h1>PAPE<span class="orange-text">CHARO</span></h1>
+                </a>
             </div>
             <ul class="nav-links">
                 <li><a href="{{ url_for('home') }}">Inicio</a></li>
-                <li><a href="{{ url_for('catalogo') }}" class="active">
-                Catálogo </a></li>
+                <li><a href="{{ url_for('catalogo') }}">
+                        Catálogo </a></li>
                 <li><a href="{{ url_for('nosotros') }}">
-                Sobre nosotros </a></li>
+                        Sobre nosotros </a></li>
                 <li><a href="{{ url_for('contacto') }}">
-                Contacto </a></li>
+                        Contacto </a></li>
             </ul>
 
             <div class="nav-actions">
@@ -34,13 +39,18 @@
                     <input type="text" placeholder="Buscar...">
                     <button><i class="fas fa-search"></i></button>
                 </div>
-                
-                 <!-- CARRITO -->
-            <a href="{{ url_for('carrito') }}" class="cart-icon">
-                <i class="fas fa-shopping-cart"></i>
-            </a>
-                
+
+                <a href="{{ url_for('carrito') }}" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+
+                {% if session.get('usuario_id') %}
+                <a href="{{ url_for('perfil') }}" class="login-link">
+                    <i class="fas fa-user-circle"></i> Mi Perfil
+                </a>
+                {% else %}
                 <a href="{{ url_for('login') }}" class="login-link"> Iniciar sesión </a>
+                {% endif %}
             </div>
         </nav>
     </header>
@@ -48,62 +58,60 @@
 
     <main class="login-main">
 
-    <section class="login-container">
+        <section class="login-container">
 
-        <h1>REGISTRARSE</h1>
+            <h1>REGISTRARSE</h1>
 
-        <p class="register-subtitle">
-            Crea tu cuenta en PAPECHARO
-        </p>
+            <p class="register-subtitle">
+                Crea tu cuenta en PAPECHARO
+            </p>
 
-        <!--- FORMULARIO -->
-       <form class="login-form" method="POST">
+            <!--- FORMULARIO -->
+            <form class="login-form" method="POST">
 
-    <div class="input-group">
-        <i class="fas fa-user"></i>
-        <input type="text" name="nombre" placeholder="Nombre completo" required>
-    </div>
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="nombre" placeholder="Nombre completo" required>
+                </div>
 
-    <div class="input-group">
-        <i class="fas fa-envelope"></i>
-        <input type="email" name="email" placeholder="Correo electrónico" required>
-    </div>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="email" placeholder="Correo electrónico" required>
+                </div>
 
-    <div class="input-group">
-        <i class="fas fa-lock"></i>
-        <input type="password" name="password" placeholder="Contraseña" required>
-    </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="password" placeholder="Contraseña" required>
+                </div>
 
-    <div class="input-group">
-        <i class="fas fa-lock"></i>
-        <input type="password" name="confirmar" placeholder="Confirmar contraseña" required>
-    </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="confirmar" placeholder="Confirmar contraseña" required>
+                </div>
 
-    <button type="submit" class="login-btn">
-        CREAR CUENTA
-    </button>
+                <button type="submit" class="login-btn">
+                    CREAR CUENTA
+                </button>
 
-</form>
+            </form>
 
-        <!-- Login -->
-        <p class="register-text">
-            ¿Ya tienes cuenta?
-            <a href="IniciarSesion.html">Inicia sesión</a>
-        </p>
+            <!-- Login -->
+            <p class="register-text">
+                ¿Ya tienes cuenta?
+                <a href="IniciarSesion.html">Inicia sesión</a>
+            </p>
 
-    </section>
+        </section>
 
-</main>
+    </main>
 
- 
-     <footer>
+
+    <footer>
         <div class="container footer-content">
             <div class="footer-logo">
                 <a href="index.html">
-                <img src="{{ url_for('static', filename='img/LogoPape2.png') }}" 
-                alt="PAPECHARO Logo" 
-                class="logo-img" 
-                height="100px">
+                    <img src="{{ url_for('static', filename='img/LogoPape2.png') }}" alt="PAPECHARO Logo"
+                        class="logo-img" height="100px">
                 </a>
                 <p>&copy; 2026 PAPECHARO. Todos los derechos reservados.</p>
             </div>
@@ -116,6 +124,7 @@
             </ul>
         </div>
     </footer>
- 
+
 </body>
+
 </html>

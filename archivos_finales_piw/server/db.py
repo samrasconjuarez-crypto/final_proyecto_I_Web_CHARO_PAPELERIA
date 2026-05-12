@@ -6,7 +6,7 @@ import os
 # configutacion de la conexión
 db_config = {
     'user': 'root',
-    'password': 'ROOT1234',
+    'password': 'root1234',
     'host': 'localhost',
     'database': 'PapeleriaCharo'
 }
@@ -67,3 +67,5 @@ def obtener_usuario_por_id(usuario_id):
     conexion.close()
     
     return usuario
+
+
