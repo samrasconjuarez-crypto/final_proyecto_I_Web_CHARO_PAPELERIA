@@ -236,9 +236,7 @@ main {
 .prev { left: 0; border-radius: 0 10px 10px 0; }
 .next { right: 0; border-radius: 10px 0 0 10px; }
 
-/* =========================================
-   CATEGORÍAS (BOTONES GRANDES)
-   ========================================= */
+/*  CATEGORÍAS (BOTONES GRANDES) */
 .categories-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -271,9 +269,7 @@ main {
     text-align: center;
 }
 
-/* =========================================
-   OFERTAS DE HOY
-   ========================================= */
+/*  OFERTAS DE HOY */
 #offers h2 {
     margin-bottom: 30px;
     font-size: 2rem;
@@ -334,9 +330,7 @@ main {
     display: block;
 }
 
-/* =========================================
-   FOOTER
-   ========================================= */
+/*  FOOTER */
 footer {
     background-color: #444;
     color: #ddd;

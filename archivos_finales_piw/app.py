@@ -12,49 +12,28 @@ app.secret_key = 'papelcharo_secreto'
 
 bcrypt = Bcrypt(app)
 
-# ==================================================
+
 # HOME
-# ==================================================
 
 @app.route('/')
 def home():
 
     return render_template('index.html')
 
-
-# ==================================================
-# CATALOGO
-# ==================================================
-
 @app.route('/catalogo')
 def catalogo():
 
     return render_template('catalogo.html')
-
-
-# ==================================================
-# CONTACTO
-# ==================================================
 
 @app.route('/contacto')
 def contacto():
 
     return render_template('contacto.html')
 
-
-# ==================================================
-# SOBRE NOSOTROS
-# ==================================================
-
 @app.route('/nosotros')
 def nosotros():
 
     return render_template('sobre_nosotros.html')
-
-
-# ==================================================
-# REGISTRO
-# ==================================================
 
 @app.route('/Registrarse', methods=['GET', 'POST'])
 def registro():
@@ -85,11 +64,6 @@ def registro():
 
     return render_template('Registrarse.html')
 
-
-# ==================================================
-# LOGIN
-# ==================================================
-
 @app.route('/login', methods=['GET', 'POST'])
 def login():
 
@@ -119,10 +93,6 @@ def login():
     return render_template('IniciarSesion.html')
 
 
-# ==================================================
-# PERFIL
-# ==================================================
-
 @app.route('/perfil')
 def perfil():
 
@@ -144,9 +114,6 @@ def carrito():
 
     return render_template('index_carrito.html')
 
-# ==================================================
-# LOGOUT
-# ==================================================
 
 @app.route('/logout')
 def logout():
@@ -156,9 +123,6 @@ def logout():
     return redirect(url_for('login'))
 
 
-# ==================================================
-# EJECUTAR SERVIDOR
-# ==================================================
 
 if __name__ == '__main__':
 

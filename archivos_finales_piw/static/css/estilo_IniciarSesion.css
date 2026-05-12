@@ -21,9 +21,7 @@ body {
     color: #e2a94a;
 }
 
-/* =========================================
-   NAVBAR
-   ========================================= */
+/* NAVBAR */
 
 header {
     position: fixed;
@@ -143,9 +141,7 @@ header {
     font-weight: bold;
 }
 
-/* =========================================
-   FORMULARIOS AUTH
-   ========================================= */
+/* FORMULARIOS AUTH */
 
 .login-main {
     min-height: 100vh;
@@ -293,9 +289,7 @@ header {
     color: #e2a94a;
 }
 
-/* =========================================
-   FOOTER
-   ========================================= */
+/*  FOOTER */
 
 footer {
     background-color: #444;
