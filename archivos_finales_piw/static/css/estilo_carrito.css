@@ -47,6 +47,10 @@ header {
     cursor: pointer;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
+.logo a{
+     text-decoration: none; /* Quita el subrayado */
+    color: inherit; 
+}
 
 .logo:hover {
     transform: scale(1.05);

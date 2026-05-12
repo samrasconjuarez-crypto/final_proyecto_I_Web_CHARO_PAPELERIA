@@ -28,7 +28,7 @@
                 <li><a href="{{ url_for('home') }}">Inicio</a></li>
                 <li><a href="{{ url_for('catalogo') }}">
                         Catálogo </a></li>
-                <li><a href="{{ url_for('nosotros') }}">
+                <li><a href="{{ url_for('nosotros') }}" class="active">
                         Sobre nosotros </a></li>
                 <li><a href="{{ url_for('contacto') }}">
                         Contacto </a></li>
@@ -97,7 +97,9 @@
             <div class="services-banner">
                 <img src="{{ url_for('static', filename='img/img_nosotros/nosotros_2.jpg') }}">
 
-                <a href="#" class="btn-explorar">Explorar mas -></a>
+
+                
+                <a href="{{ url_for('home') }}" class="btn-explorar">Explorar mas -></a>
             </div>
 
             <div class="services-text">
