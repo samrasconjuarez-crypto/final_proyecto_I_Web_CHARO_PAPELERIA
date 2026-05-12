@@ -40,7 +40,6 @@ header {
     align-items: center;
 }
 
-/* LOGO */
 
 .logo {
     cursor: pointer;
@@ -64,7 +63,7 @@ header {
     letter-spacing: -1px;
 }
 
-/* ENLACES */
+
 
 .nav-links {
     list-style: none;
@@ -88,7 +87,7 @@ header {
     border-bottom: 2px solid #4a90e2;
 }
 
-/* ACCIONES */
+
 
 .nav-actions {
     display: flex;
@@ -152,7 +151,7 @@ header {
     padding-bottom: 80px;
 }
 
-/* CAJA */
+
 
 .login-container {
     width: 100%;
@@ -164,7 +163,7 @@ header {
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
-/* TITULO */
+
 
 .login-container h1 {
     font-size: 3rem;
@@ -173,7 +172,7 @@ header {
     color: #111;
 }
 
-/* SUBTITULO */
+
 
 .register-subtitle {
     font-size: 1.2rem;
@@ -182,7 +181,6 @@ header {
     color: #222;
 }
 
-/* FORMULARIO */
 
 .login-form {
     display: flex;
@@ -190,7 +188,6 @@ header {
     gap: 18px;
 }
 
-/* INPUTS */
 
 .input-group {
     display: flex;
@@ -216,7 +213,7 @@ header {
     color: #333;
 }
 
-/* OPCIONES LOGIN */
+
 
 .login-options {
     display: flex;
@@ -245,7 +242,7 @@ header {
     color: #e2a94a;
 }
 
-/* BOTÓN */
+
 
 .login-btn {
     background: linear-gradient(to right, #ff5e00, #ff6a00);
@@ -271,7 +268,7 @@ header {
     opacity: 0.95;
 }
 
-/* TEXTO INFERIOR */
+
 
 .register-text {
     margin-top: 25px;
@@ -289,7 +286,7 @@ header {
     color: #e2a94a;
 }
 
-/*  FOOTER */
+
 
 footer {
     background-color: #444;

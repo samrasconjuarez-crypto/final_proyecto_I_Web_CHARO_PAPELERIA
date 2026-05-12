@@ -24,15 +24,15 @@
     align-items: center;
     gap: 20px;
     padding: 20px;
-    background: #ede6d6; /* Beige de tus tarjetas */
+    background: #ede6d6; 
     border-radius: 15px;
     transition: 0.3s;
 }
 
 .info-item-link {
     text-decoration: none; /* Quita el subrayado */
-    color: inherit; /* Mantiene el color de texto original */
-    display: block; /* Para que el link ocupe todo el espacio de la tarjeta */
+    color: inherit; 
+    display: block; 
 }
 
 .info-item {
@@ -54,7 +54,7 @@
 
 .info-item i {
     font-size: 1.8rem;
-    color: #f15a24; /* Naranja corporativo */
+    color: #f15a24;
     width: 50px;
     text-align: center;
 }
@@ -76,7 +76,7 @@
 .contact-form h3 {
     font-size: 1.8rem;
     margin-bottom: 25px;
-    color: #007179; /* Teal de tus círculos */
+    color: #007179;
 }
 
 .form-group {

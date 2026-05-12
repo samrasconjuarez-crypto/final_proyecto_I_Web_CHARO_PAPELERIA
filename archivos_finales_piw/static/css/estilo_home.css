@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #f8f5ed; /* Fondo crema claro */
+    background-color: #f8f5ed;
     color: #333;
     line-height: 1.6;
 }
@@ -40,7 +40,7 @@ header {
     align-items: center;
 }
 
-/* Efecto Hover en Logo */
+
 .logo {
      cursor: pointer;
     transition: transform 0.3s ease, filter 0.3s ease;
@@ -133,10 +133,10 @@ header {
     font-weight: bold;
 }
 
-/* BOTÓN DE WHATSAPP FIJO (DEBAJO DEL NAV) */
+
 .whatsapp-fixed {
     position: fixed;
-    top: 90px; /* Se coloca justo debajo del navbar */
+    top: 90px; 
     right: 25px;
     background-color: #25d366;
     color: white;
@@ -158,7 +158,7 @@ header {
     background-color: #1ebe5a;
 }
 
-/*  (MAIN)*/
+
 main {
     margin-top: 160px; /* Espacio para que el navbar fijo no tape el contenido */
     padding-bottom: 60px;
@@ -166,7 +166,7 @@ main {
 
 /* SLIDER  */
 #hero-slider {
-    margin-top: 100px; /* Espacio adicional específico para el slider */
+    margin-top: 100px; 
     margin-bottom: 50px;
     border-radius: 15px;
     overflow: hidden;
@@ -236,7 +236,7 @@ main {
 .prev { left: 0; border-radius: 0 10px 10px 0; }
 .next { right: 0; border-radius: 10px 0 0 10px; }
 
-/*  CATEGORÍAS (BOTONES GRANDES) */
+
 .categories-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

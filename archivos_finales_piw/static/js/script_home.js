@@ -1,17 +1,16 @@
 // Espera a que el DOM esté completamente cargado antes de ejecutar el script
 document.addEventListener("DOMContentLoaded", function() {
 
-    // --- VARIABLES DEL SLIDER ---
+
     const slides = document.querySelectorAll(".slide"); // Selecciona todas las diapositivas
-    const prevBtn = document.getElementById("prevSlide"); // Selecciona el botón 'anterior'
-    const nextBtn = document.getElementById("nextSlide"); // Selecciona el botón 'siguiente'
+    const prevBtn = document.getElementById("prevSlide");
+    const nextBtn = document.getElementById("nextSlide");
     const intervalTime = 5000; // Tiempo en milisegundos para el movimiento automático (5 seg)
-    let currentSlide = 0; // Índice de la diapositiva actual
-    let slideInterval; // Variable para almacenar el temporizador
+    let currentSlide = 0;
+    let slideInterval; 
 
-    // --- FUNCIONES DEL SLIDER ---
 
-    // Muestra la diapositiva en el índice 'n'
+
     function showSlide(n) {
         // Oculta todas las diapositivas eliminando la clase 'active'
         slides.forEach(slide => slide.classList.remove("active"));
@@ -45,19 +44,19 @@ document.addEventListener("DOMContentLoaded", function() {
         clearInterval(slideInterval);
     }
 
-    // --- EVENT LISTENERS (INTERACCIONES) ---
+    // (INTERACCIONES)
 
     // Eventos para los botones laterales
     prevBtn.addEventListener("click", function() {
         prevSlide();
-        stopSlideInterval(); // Detiene el automático cuando el usuario interactúa
-        startSlideInterval(); // Lo reinicia para que empiece de nuevo la cuenta
+        stopSlideInterval(); 
+        startSlideInterval(); 
     });
 
     nextBtn.addEventListener("click", function() {
         nextSlide();
-        stopSlideInterval(); // Detiene el automático cuando el usuario interactúa
-        startSlideInterval(); // Lo reinicia para que empiece de nuevo la cuenta
+        stopSlideInterval(); 
+        startSlideInterval();
     });
 
     // Eventos opcionales: Detener automático al pasar el ratón por encima del slider

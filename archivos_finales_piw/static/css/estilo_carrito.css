@@ -1,4 +1,4 @@
-/* RESET GENERAL */
+
 
 *{
     margin: 0;
@@ -41,7 +41,7 @@ header {
     align-items: center;
 }
 
-/* Efecto Hover en Logo */
+
 
 .logo {
     cursor: pointer;

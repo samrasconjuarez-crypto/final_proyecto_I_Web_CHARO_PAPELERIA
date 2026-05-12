@@ -1,4 +1,4 @@
-/* ESTILOS GENERALES Y RESETS (Mismos que Home) */
+
 * {
     margin: 0;
     padding: 0;
@@ -21,7 +21,7 @@ body {
 .orange-text { color: #e2a94a; }
 .text-center { text-align: center; }
 
-/* ENCABEZADO (NAVBAR) - FIJO*/
+
 header {
     position: fixed;
     top: 0;
@@ -46,7 +46,7 @@ header {
 }
 
 .logo a{
-     text-decoration: none; /* Quita el subrayado */
+     text-decoration: none; 
     color: inherit; 
 }
 
@@ -147,9 +147,9 @@ header {
     background-color: #1ebe5a;
 }
 
-/* CONTENIDO PRINCIPAL (SOBRE NOSOTROS)*/
+
 main {
-    margin-top: 220px; /* Mantiene el espacio debajo del navbar fijo */
+    margin-top: 220px; 
     padding-bottom: 60px;
 }
 
@@ -159,10 +159,9 @@ h2 {
     margin-bottom: 25px;
 }
 
-/* Sección Introducción */
 .about-section {
   max-width: 850px;
-    margin: 0 auto 100px auto; /* Aumentamos el margen inferior para separar secciones */
+    margin: 0 auto 100px auto; 
     padding-top: 20px;
 }
 
@@ -209,7 +208,7 @@ h2 {
     object-fit: cover;
 }
 
-/* Sección Servicios (Banner y Botón) */
+
 .services-section {
     max-width: 1000px;
     margin: 0 auto 60px auto;
@@ -235,7 +234,7 @@ h2 {
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #6b8df2; /* Azul estilo de tu imagen */
+    background-color: #6b8df2; 
     color: white;
     padding: 12px 30px;
     border-radius: 25px;
