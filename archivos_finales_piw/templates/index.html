@@ -7,6 +7,7 @@
     <title>PAPECHARO - Tu Papelería de Confianza</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo_home.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="https://www.svgrepo.com/show/513326/pencil.svg">
 </head>
 
 <body>
@@ -36,9 +37,11 @@
 
             <div class="nav-actions">
     <div class="search-bar">
-        <input type="text" placeholder="Buscar...">
-        <button><i class="fas fa-search"></i></button>
-    </div>
+    <input type="text" id="searchInput" placeholder="Buscar...">
+    <button><i class="fas fa-search"></i></button>
+
+    <div id="searchResults" class="search-results"></div>
+</div>
     
     <a href="{{ url_for('carrito') }}" class="cart-icon">
         <i class="fas fa-shopping-cart"></i>

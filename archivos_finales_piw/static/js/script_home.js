@@ -67,3 +67,60 @@ document.addEventListener("DOMContentLoaded", function() {
     // --- INICIALIZACIÓN ---
     startSlideInterval(); // Comienza el movimiento automático al cargar
 });
+
+// Productos simulados
+const productos = [
+    "Cuaderno profesional",
+    "Lápiz HB",
+    "Colores Prismacolor",
+    "Mochila escolar",
+    "Pegamento líquido",
+    "Tijeras escolares",
+    "Calculadora científica",
+    "Marcadores permanentes",
+    "Lonchera infantil",
+    "Papel cascarón"
+];
+
+const input = document.getElementById("searchInput");
+const resultsBox = document.getElementById("searchResults");
+
+input.addEventListener("keyup", () => {
+    const texto = input.value.toLowerCase();
+
+    resultsBox.innerHTML = "";
+
+    if (texto === "") {
+        resultsBox.style.display = "none";
+        return;
+    }
+
+    const resultados = productos.filter(producto =>
+        producto.toLowerCase().includes(texto)
+    );
+
+    if (resultados.length > 0) {
+        resultsBox.style.display = "block";
+
+        resultados.forEach(producto => {
+            const item = document.createElement("div");
+            item.classList.add("search-item");
+            item.textContent = producto;
+
+            item.addEventListener("click", () => {
+                input.value = producto;
+                resultsBox.style.display = "none";
+            });
+
+            resultsBox.appendChild(item);
+        });
+
+    } else {
+        resultsBox.style.display = "block";
+        resultsBox.innerHTML = `
+            <div class="search-item">
+                No se encontraron resultados
+            </div>
+        `;
+    }
+});
